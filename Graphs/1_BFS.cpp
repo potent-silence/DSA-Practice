@@ -9,15 +9,12 @@ class Solution {
         indexes.push(0);
         while(!indexes.empty()){
             // Code here is similar to BFS traversal in trees
-            int n=indexes.size();// Taking initial size of queue
-            while(n--){
-                int f=indexes.front();
-                indexes.pop();
-                if(visited[f])  continue;// If node is traversed continue to next node
-                ans.push_back(f);// Add the current unvisited node to ans
-                visited[f]=1;// Mark the visited node
-                for(int i=0;i<adj[f].size();i++)    indexes.push(adj[f][i]);// Adding nodes in the queue that are not traversed
-            }
+            int f=indexes.front();
+            indexes.pop();
+            if(visited[f])  continue;// If node is traversed continue to next node
+            ans.push_back(f);// Add the current unvisited node to ans
+            visited[f]=1;// Mark the visited node
+            for(int i=0;i<adj[f].size();i++)    indexes.push(adj[f][i]);// Adding nodes in the queue that are not traversed
         }
         return ans;
     }
