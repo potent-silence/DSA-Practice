@@ -28,7 +28,7 @@ class Solution{
         
         for(int i=0;i<n-1;i++)
             for(int j=0;j<min(dict[i].size(),dict[i+1].size());j++)
-                if(dict[i][j]!=dict[i+1][j]){    
+                if(dict[i][j]!=dict[i+1][j]){ // Finding the first index where strings differ   
                     adj[dict[i][j]].push_back(dict[i+1][j]); // Building a adjacency graph by taking the first index where both the strings differ and store
                                                              // it in a graph and break.
                     break;
