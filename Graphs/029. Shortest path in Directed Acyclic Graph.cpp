@@ -22,7 +22,7 @@ class Solution {
                 if(degree[it.first]==0) // If the Indegree becomes 0
                     ind.push(it.first); // We push it in the queue
                 
-                ans[it.first]=min(ans[it.first],ans[f]+it.second);// Comparing the shortest path possible, even if degree exists is 0 or not 
+                ans[it.first]=min(ans[it.first],ans[f]+it.second);// Comparing the shortest path possible, even if degree is 0 or not 
             }
 	   }
 	   
